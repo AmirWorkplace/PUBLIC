@@ -1,68 +1,330 @@
-
+<!-- 
+  * Syed Amir Ali
+  * GitHub : https://github.com/AmirWorkplace !
+  * Please give A git star !
+  * Happy Coding !
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matha Nosto</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
 
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    body{
-      background: #111712;
-      overflow: hidden;
-    }
-  </style>
-</head>
-<body>
-    
-    <canvas></canvas>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
 
+    <!-- ------------------------------------------------------ 
+      StyleSheet 
+      ------------------------------------------------------ -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Blaka&family=Blaka+Hollow&family=Bungee&family=Codystar:wght@300&family=Dancing+Script&family=Diplomata+SC&family=Dynalight&family=Eater&family=Fascinate&family=Faster+One&family=Frijole&family=IBM+Plex+Mono:wght@100;200;300;700&family=IM+Fell+English+SC&family=Irish+Grover&family=Julius+Sans+One&family=Kdam+Thmor+Pro&family=League+Gothic&family=Macondo&family=Monofett&family=Monoton&family=Mr+Dafoe&family=Notable&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Potta+One&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Rubik+Mono+One&family=Rubik+Moonrocks&family=Rubik+Puddles&family=Russo+One&family=Sigmar+One&family=Stint+Ultra+Condensed&family=Tangerine&family=Ultra&display=swap");
+      /*
+        {
+        CSS rules to specify families 
+        font-family: 'Alfa Slab One',
+        cursive;
+        font-family: 'Annie Use Your Telescope',
+        cursive;
+        font-family: 'Bebas Neue',
+        cursive;
+        font-family: 'Blaka',
+        cursive;
+        font-family: 'Blaka Hollow',
+        cursive;
+        font-family: 'Bungee',
+        cursive;
+        font-family: 'Codystar',
+        cursive;
+        font-family: 'Dancing Script',
+        cursive;
+        font-family: 'Diplomata SC',
+        cursive;
+        font-family: 'Dynalight',
+        cursive;
+        font-family: 'Eater',
+        cursive;
+        font-family: 'Fascinate',
+        cursive;
+        font-family: 'Faster One',
+        cursive;
+        font-family: 'Frijole',
+        cursive;
+        font-family: 'IBM Plex Mono',
+        monospace;
+        font-family: 'IM Fell English SC',
+        serif;
+        font-family: 'Irish Grover',
+        cursive;
+        font-family: 'Julius Sans One',
+        sans-serif;
+        font-family: 'Kdam Thmor Pro',
+        sans-serif;
+        font-family: 'League Gothic',
+        sans-serif;
+        font-family: 'Macondo',
+        cursive;
+        font-family: 'Monofett',
+        cursive;
+        font-family: 'Monoton',
+        cursive;
+        font-family: 'Mr Dafoe',
+        cursive;
+        font-family: 'Notable',
+        sans-serif;
+        font-family: 'Pacifico',
+        cursive;
+        font-family: 'Permanent Marker',
+        cursive;
+        font-family: 'Poppins',
+        sans-serif;
+        font-family: 'Potta One',
+        cursive;
+        font-family: 'Press Start 2P',
+        cursive;
+        font-family: 'Roboto',
+        sans-serif;
+        font-family: 'Roboto Mono',
+        monospace;
+        font-family: 'Rock Salt',
+        cursive;
+        font-family: 'Rubik Mono One',
+        sans-serif;
+        font-family: 'Rubik Moonrocks',
+        cursive;
+        font-family: 'Rubik Puddles',
+        cursive;
+        font-family: 'Russo One',
+        sans-serif;
+        font-family: 'Sigmar One',
+        cursive;
+        font-family: 'Stint Ultra Condensed',
+        cursive;
+        font-family: 'Tangerine',
+        cursive;
+        font-family: 'Ultra',
+        serif;
+      } 
+*/
+
+      :root {
+        --clr-text: #fff;
+        --clr-bg: #101711;
+        --clr-WD: #000;
+        --clr-txt: #fff;
+        /* Optional */
+        --clr-text-light: #fdf7f7;
+
+        /* Secondary Color */
+        --bbl-bg: #4fc3dc;
+        --clr-crimson: #dc143c;
+        --clr-blue-1876f2: #1876f2;
+        --clr-greeen-187615f2: #187615f2;
+        --clr-deepGreen-04fc43: #04fc43;
+        --clr-yellow: #fee800;
+        --clr-lightRed-ff2972: #ff2972;
+      }
+
+      .dark-theme {
+        --clr-bg: #f1f1f1;
+        /* --clr-bg: #101711; */
+        --clr-text: #000;
+        --clr-WD: #fff;
+        --clr-txt: #000;
+
+        /* Optional */
+        --clr-text-light: #2d2727;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Background Animation */
+
+      body {
+        height: 100vh;
+        width: 100%;
+        background: var(--clr-bg);
+        color: var(--clr-txt);
+        position: relative;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lists {
+        list-style: none;
+        background: #fff;
+        margin: 20px 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.35s;
+      }
+
+      .lists a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .lists a ion-icon {
+        color: #000;
+        font-size: 2.5rem;
+        padding: 5px 0 0 5px;
+        transition: 0.35s;
+      }
+
+      .lists.active {
+        background: var(--clr1);
+      }
+
+      .lists.active a ion-icon {
+        color: var(--clr3);
+      }
+
+      .lists:hover a ion-icon {
+        font-size: 3rem;
+        padding: 6px 0 0 5px;
+      }
+      .lists:hover {
+        background: var(--clr1);
+        width: 60px;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="lists active" style="--clr1: #0080ff; --clr3: #000">
+          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        </li>
+        <li class="lists" style="--clr1: #4cddda; --clr3: #dc143c">
+          <a href="#"><ion-icon name="american-football-outline"></ion-icon></a>
+        </li>
+        <li class="lists" style="--clr1: #ff00dd; --clr3: #ffffff">
+          <a href="#"><ion-icon name="airplane-outline"></ion-icon></a>
+        </li>
+        <li class="lists" style="--clr1: #9d04fc; --clr3: #ffffff">
+          <a href="#"><ion-icon name="archive-outline"></ion-icon></a>
+        </li>
+        <li class="lists" style="--clr1: #015c81; --clr3: #dc143c">
+          <a href="#"><ion-icon name="arrow-undo-outline"></ion-icon></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ------------------------------------------------------ 
+      Main JS Part:  
+      ------------------------------------------------------ -->
     <script>
-    
-        var t = 0;
-        var c = document.querySelector("canvas");     
-        var $ = c.getContext('2d'); 
-        c.width = window.innerWidth;
-        c.height = window.innerHeight;
-        $.fillStyle = 'hsla(0,0%,0%,1)';
-
-        window.addEventListener('resize', function() {
-          c.width = window.innerWidth;
-          c.height = window.innerHeight;
-        }, false);
-
-        function draw() {
-          $.globalCompositeOperation = 'source-over';
-          $.fillStyle = 'hsla(0,0%,0%,.1)';
-          $.fillRect(0, 0, c.width, c.height);
-          var foo, i, j, r;
-          foo = Math.sin(t) * 2 * Math.PI;
-          for (i=0; i<400; ++i) {
-            r = 400 * Math.sin(i * foo);
-            $.globalCompositeOperation = '';
-            $.fillStyle = 'hsla(' + i + 12 + ',100%, 60%,1)';
-            $.beginPath();
-            $.arc(Math.sin(i) * r + (c.width / 2), 
-                  Math.cos(i) * r + (c.height / 2), 
-                  1.5, 0, Math.PI * 2);
-            $.fill();
-
-          }
-          t += 0.000005;
-          return t %= 2 * Math.PI;
-
-        };
-
-        function run() {
-          window.requestAnimationFrame(run);
-          draw();
-        }
-        run();
+      const lists = document.querySelectorAll(".lists");
+      function activeClass() {
+        lists.forEach((getLists) => {
+          getLists.classList.remove("active");
+          this.classList.add("active");
+        });
+      }
+      lists.forEach((getlists) => {
+        getlists.addEventListener("click", activeClass);
+      });
     </script>
-</body>
+
+    <!-- ------------------------------------------------------ 
+      Pakage Links 
+      ------------------------------------------------------ -->
+    <!-- Ion Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Font Awosome Kit -->
+    <script
+      src="https://kit.fontawesome.com/625708b356.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Box icon -->
+  </body>
 </html>
+
+<!-- ------------------------------------------------------ 
+      Raff parts: Ignore it 
+      ------------------------------------------------------ -->
+<!-- 
+    for(var k = 0; k < lists.length; k++){
+    lists[k].className = 'lists active';
+  }
+-->
+<!-- 
+  const list = document.querySelectorAll(".container ul li");
+      const icon = document.querySelectorAll(".container ul li a");
+
+      icon.forEach((getIcon) => {
+        getIcon.addEventListener('click', () =>{
+          list.forEach((getlist) => {
+            getlist.classList.toggle('active');
+          });
+        });
+      }); 
+-->
+<!-- 
+    
+  for(var i = 0, k = 0; i < lists.length, k < lists.length; i++, k++){
+    lists[i].onclick = function(){
+      var j = 0;
+      while(j < lists.length){
+        lists[j++].className = 'lists';
+      }
+      lists[k].className = 'lists active';
+    }
+  }
+
+-->
+
+<!-- 
+  
+      /* .container ul li {
+  list-style: none;
+  background: #fff;
+  margin: 20px 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container ul li a ion-icon {
+  color: #000;
+  font-size: 2.5rem;
+  padding: 5px 0 0 5px;
+}
+
+.container ul li.active {
+  background: #4fc3dc;
+}
+
+.container ul li.active a ion-icon {
+  color: #dc143c;
+} */
+
+-->
