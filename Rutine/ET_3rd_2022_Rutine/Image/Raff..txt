@@ -1,0 +1,123 @@
+
+
+<div class="cbox">
+  <span>
+      <label>
+      <input type="checkbox">
+      <!-- class="chek" <span><input type="checkbox"></span> -->
+    </label></span>
+</div>
+
+
+
+<script>
+  let chkbox = document.querySelector(".cbox span label");
+  let chkboxS = document.querySelector(".cbox chkboxS");
+
+
+    chkboxS.addEventListener('click', () =>{
+    chkbox.classList.add("chek");
+    chkboxS.classList.add("chek");
+
+  });
+
+  chkbox.chkboxaddEventListener('click', () =>{
+    chkbox.classList.remove("chek");
+    chkboxS.classList.remove("chek");
+
+  });
+  
+  
+  
+  </script>
+
+
+
+
+
+
+
+class
+
+
+
+/* label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #dc144c;
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 75px;
+}*/
+
+label input {
+  /* appearance: none; */
+  z-index: -2;
+  position: absolute;
+}
+
+/* input:checked ~ span{
+  display: none;
+} */
+
+.cbox {
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  border: 2px solid #04fc4366;
+  position: absolute;
+  background-color: #1876f233;
+  position: relative;
+  padding: 3px;
+}
+
+.cbox span label {
+  /* position: absolute; */
+  width: 40px;
+  height: 10.5px;
+  border-radius: 20px;
+  margin-left: 2px;
+  margin-top: 1.5px;
+  z-index: 100;
+  background: #1876f2;
+  border: 1px solid #1876f2;
+  transition: 0.5s;
+}
+
+.cbox span {
+  position: absolute;
+  width: 17.5px;
+  height: 17.5px;
+  border: 1px solid #dc143c;
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-top: 1.5px;
+  background: #dc143c;
+  transition: 0.5s;
+}
+/* 
+.cbox span label.chek,
+.cbox span.chek {
+  margin-left: 31px;
+  transition: 0.5s;
+}
+
+.cbox span label.chek {
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.cbox span label {
+  z-index: -10;
+
+}
+
+.cbox span {
+  transition: 0.5s;
+  margin-top: 1.5px;
+  z-index: 100;
+  background: #1876f2;
+  border: #1876f2;
+} */
